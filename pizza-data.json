@@ -1,0 +1,98 @@
+[
+    {
+        "name": "Margherita",
+        "price": 17
+    },
+    {
+        "name": "Prosciutto",
+        "price": 17
+    },
+    {
+        "name": "Funghi",
+        "price": 18
+    },
+    {
+        "name": "Prosciutto e Funghi",
+        "price": 18
+    },
+    {
+        "name": "Diavola",
+        "price": 19
+    },
+    {
+        "name": "Salami",
+        "price": 19
+    },
+    {
+        "name": "Tonno",
+        "price": 18
+    },
+    {
+        "name": "Tonno e Cipolla",
+        "price": 18
+    },
+    {
+        "name": "Capricciosa",
+        "price": 18
+    },
+    {
+        "name": "Quattro Stagioni",
+        "price": 18
+    },
+    {
+        "name": "Romana",
+        "price": 18
+    },
+    {
+        "name": "Casei Beiu",
+        "price": 22
+    },
+    {
+        "name": "Pollo",
+        "price": 18
+    },
+    {
+        "name": "Afumigata",
+        "price": 21
+    },
+    {
+        "name": "Ungureasca",
+        "price": 22
+    },
+    {
+        "name": "Yolo",
+        "price": 22
+    },
+    {
+        "name": "Vegetariana",
+        "price": 18
+    },
+    {
+        "name": "Carbonara",
+        "price": 22
+    },
+    {
+        "name": "Philadelphia",
+        "price": 25
+    },
+    {
+        "name": "Bresciana",
+        "price": 18
+    },
+    {
+        "name": "Americana",
+        "price": 21
+    },
+    {
+        "name": "Big Beiu",
+        "price": 32
+    },
+    {
+        "name": "Quattro Formaggi",
+        "price": 25
+    },
+    {
+        "name": "Placinta X-u",
+        "price": 21
+    }
+]
