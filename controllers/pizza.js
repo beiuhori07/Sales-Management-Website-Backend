@@ -4,13 +4,13 @@ const { StatusCodes } = require('http-status-codes')
 const { BadRequestError, NotFoundError } = require('../errors')
 
 const getSinglePizza = async (req, res) => {
-    const { name: pizzaName } = req.body
+    const { id: pizzaId } = req
 
-    if(!pizzaName) {
-        throw new BadRequestError('Please provide a pizza name')
+    if(!pizzaId) {
+        throw new BadRequestError('Please provide a pizza id')
     }
 
-    const pizzaFound = await Pizza.findOne({name: pizzaName})
+    const pizzaFound = await Pizza.findById(pizzaId)
     if(!pizzaFound) {
         throw new NotFoundError('invalid pizza name')
     }
@@ -24,13 +24,6 @@ const getAllPizza = async (req, res) => {
     res.status(StatusCodes.OK).json({ pizzas, length: pizzas.length })
 }
 
-const getMultiplePizza = async (req, res) => {
-    const { name: pizzaArray } = req.body
-
-    const pizzas = await Pizza.find( {name: pizzaArray} )
-
-    res.status(StatusCodes.OK).json(pizzas)
-}
 
 const updatePizza = async (req, res) => {
     const { name: pizzaName, addQuantity } = req.body
@@ -58,5 +51,4 @@ module.exports = {
     updatePizza,
     getSinglePizza,
     getAllPizza,
-    getMultiplePizza
 }
