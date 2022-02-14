@@ -4,7 +4,10 @@ const { StatusCodes } = require('http-status-codes')
 const { BadRequestError, NotFoundError } = require('../errors')
 
 const getSinglePizza = async (req, res) => {
-    const { id: pizzaId } = req
+    const { params: {
+        id: pizzaId 
+        }
+    } = req
 
     if(!pizzaId) {
         throw new BadRequestError('Please provide a pizza id')
