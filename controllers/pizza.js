@@ -32,7 +32,7 @@ const getMorePizza = async (req, res) => {
         pizzas.push(foundItem)
     }) 
 
-    res.status(StatusCodes.OK).json({ ids, pizzas, length: pizzas.length })
+    res.status(StatusCodes.OK).json({ id: ids[1], pizzas, length: pizzas.length })
 }
 
 const getAllPizza = async (req, res) => {
