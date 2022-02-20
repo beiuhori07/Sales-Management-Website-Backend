@@ -21,6 +21,14 @@ const getSinglePizza = async (req, res) => {
     res.status(StatusCodes.OK).json(pizzaFound)
 }
 
+const getMorePizza = async (req, res) => {
+    const data = req.body;
+
+    const pizzas = await Pizza.findById(data)
+
+    res.status(StatusCodes.OK).json({ pizzas, length: pizzas.length })
+}
+
 const getAllPizza = async (req, res) => {
     const pizzas = await Pizza.find();
 
@@ -54,4 +62,5 @@ module.exports = {
     updatePizza,
     getSinglePizza,
     getAllPizza,
+    getMorePizza
 }
