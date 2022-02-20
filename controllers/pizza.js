@@ -24,13 +24,14 @@ const getSinglePizza = async (req, res) => {
 const getMorePizza = async (req, res) => {
     const { ids } = req.body;
 
+
     let pizzas = []
 
     ids.forEach( async (item) => {
         pizzas.push(await Pizza.findById(item))
     }) 
 
-    res.status(StatusCodes.OK).json({ pizzas, length: pizzas.length })
+    res.status(StatusCodes.OK).json({ ids, pizzas, length: pizzas.length })
 }
 
 const getAllPizza = async (req, res) => {
