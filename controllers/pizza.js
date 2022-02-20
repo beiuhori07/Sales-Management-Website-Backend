@@ -22,7 +22,7 @@ const getSinglePizza = async (req, res) => {
 }
 
 const getMorePizza = async (req, res) => {
-    const data = req.body;
+    const { id: data } = req.body;
 
     const pizzas = await Pizza.findById(data)
 
