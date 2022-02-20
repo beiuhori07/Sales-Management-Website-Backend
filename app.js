@@ -38,7 +38,7 @@ const notFoundMiddleware = require('./middleware/not-found')
 app.set('trust proxy', 1) // need to be set if you are behind a reverse proxy
 app.use(rateLimiter({
     windowMs: 15 * 60 * 1000, // 15 min
-    max: 100
+    max: 1000
 }))
 app.use(express.json())
 app.use(helmet())
