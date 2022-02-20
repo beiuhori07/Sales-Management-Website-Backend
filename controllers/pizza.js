@@ -28,7 +28,8 @@ const getMorePizza = async (req, res) => {
     let pizzas = []
 
     ids.forEach( async (item) => {
-        pizzas.push(await Pizza.findById(item))
+        let foundItem = await Pizza.findById(item)
+        pizzas.push(foundItem)
     }) 
 
     res.status(StatusCodes.OK).json({ ids, pizzas, length: pizzas.length })
