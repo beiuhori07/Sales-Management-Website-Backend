@@ -29,6 +29,7 @@ const authenticateUser = require('./middleware/authentication')
 // routers
 const authRouter = require('./routes/auth')
 const pizzaRouter = require('./routes/pizza-route')
+const pizzaLogsRouter = require('./routes/pizzaLogs-route')
 
 // error handler
 const errorHandlerMiddleware = require('./middleware/error-handler')
@@ -51,6 +52,7 @@ app.get('/', (req, res) =>
 )
 app.use('/api/v1/auth', authRouter)
 app.use('/api/v1/pizza', authenticateUser, pizzaRouter)
+app.use('/api/v1/pizzaLogs', authenticateUser, pizzaLogsRouter)
 
 app.use(errorHandlerMiddleware)
 app.use(notFoundMiddleware)
@@ -61,6 +63,13 @@ const start = async () => {
         // connect to db
         await connectDB(process.env.MONGO_URI)
 
+        // let text = "02/12/2022";
+        // let resut
+        // for(i = 0; i < 3; i++) {
+        //     result = text.replace("/", "-");
+        //     text = result  
+        // }
+        // console.log(result);
 
         app.listen(port, () => 
             console.log(`server is listening on port ${port}...`)

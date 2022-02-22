@@ -14,8 +14,8 @@ const PizzaEntriesSchema = new mongoose.Schema({
         required: [true, 'Please provide numberSold']
     },
     time: {
-        type: Date,
-        default: Date.now
+        type: String,
+        default: 'MM-DD-YYYY'
     }
 })
 

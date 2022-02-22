@@ -1,4 +1,6 @@
 const Pizza = require('../models/Pizza')
+var moment = require('moment'); // require
+
 const PizzaEntries = require('../models/Pizza-Entries')
 const { StatusCodes } = require('http-status-codes')
 const { BadRequestError, NotFoundError } = require('../errors')
@@ -55,10 +57,20 @@ const updatePizza = async (req, res) => {
     }
     const pizzaNoSold = pizzaFound.numberSold;
     await pizzaFound.updateOne({ numberSold: pizzaNoSold + addQuantity }, {new: true, runValidators: true})
+    
+    let mom = moment().format('L')
+    let resut
+    for(i = 0; i < 3; i++) {
+        result = mom.replace("/", "-");
+        mom = result  
+    }
+    console.log(result);
+
     await PizzaEntries.create({
         name: pizzaName,
         numberSold: addQuantity,
         price: pizzaFound.price * addQuantity,
+        time: mom
     })
     res.status(StatusCodes.OK).json({ msg: `added ${addQuantity} to ${pizzaName}` })
 }
