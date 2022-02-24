@@ -44,7 +44,7 @@ const getAllPizza = async (req, res) => {
 
 
 const updatePizza = async (req, res) => {
-    const { name: pizzaName, addQuantity } = req.body
+    const { name: pizzaName, addQuantity , date } = req.body
     if(!pizzaName) {
         throw new BadRequestError('Please provide the pizza name')
     }
@@ -58,19 +58,21 @@ const updatePizza = async (req, res) => {
     const pizzaNoSold = pizzaFound.numberSold;
     await pizzaFound.updateOne({ numberSold: pizzaNoSold + addQuantity }, {new: true, runValidators: true})
     
-    let mom = moment().format('L')
-    let resut
-    for(i = 0; i < 3; i++) {
-        result = mom.replace("/", "-");
-        mom = result  
-    }
-    console.log(result);
+    // let resut
+    // if(!date) {
+    //     let mom = moment().format('L')
+    // }
+    // for(i = 0; i < 3; i++) {
+    //     result = mom.replace("/", "-");
+    //     mom = result  
+    // }
+    // console.log(result);
 
     await PizzaEntries.create({
         name: pizzaName,
         numberSold: addQuantity,
         price: pizzaFound.price * addQuantity,
-        time: mom
+        time: date
     })
     res.status(StatusCodes.OK).json({ msg: `added ${addQuantity} to ${pizzaName}` })
 }
