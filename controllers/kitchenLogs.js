@@ -1,4 +1,4 @@
-const KitchenEntries = require('../models/kitchen-Entries')
+const KitchenEntries = require('../models/Kitchen-Entries')
 const { StatusCodes } = require('http-status-codes')
 const { BadRequestError, NotFoundError } = require('../errors')
 
