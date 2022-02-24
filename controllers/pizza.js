@@ -17,7 +17,7 @@ const getSinglePizza = async (req, res) => {
 
     const pizzaFound = await Pizza.findById(pizzaId)
     if(!pizzaFound) {
-        throw new NotFoundError('invalid pizza name')
+        throw new NotFoundError('invalid pizza id')
     }
 
     res.status(StatusCodes.OK).json(pizzaFound)

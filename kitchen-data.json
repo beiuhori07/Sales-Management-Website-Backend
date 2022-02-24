@@ -1,0 +1,198 @@
+[
+    {
+        "name": "Platou Beiu",
+        "price": 24
+    },
+    {
+        "name": "Platou Palermo",
+        "price": 21
+    },
+    {
+        "name": "Platou piept umplut",
+        "price": 22
+    },
+    {
+        "name": "Platou Escalop",
+        "price": 21
+    },
+    {
+        "name": "Platou ciolan afumat",
+        "price": 22
+    },
+    {
+        "name": "Platou Medalion",
+        "price": 21
+    },
+    {
+        "name": "Platou piept de pui cu usturoi",
+        "price": 20
+    },
+    {
+        "name": "Platou cascaval pane",
+        "price": 18
+    },
+    {
+        "name": "Platou carnati prajiti",
+        "price": 19
+    },
+    {
+        "name": "Platou Gordon Bleu",
+        "price": 22
+    },
+    {
+        "name": "Platou mititei",
+        "price": 22
+    },
+    {
+        "name": "Platou kebab",
+        "price": 20
+    },
+    {
+        "name": "Platou crispy",
+        "price": 21
+    },
+    {
+        "name": "Platou piept de pui la gratar",
+        "price": 22
+    },
+    {
+        "name": "Gordon Bleu",
+        "price": 15
+    },
+    {
+        "name": "Medalion 'Beiu'",
+        "price": 15
+    },
+    {
+        "name": "Piept patat",
+        "price": 16
+    },
+    {
+        "name": "Escalop de pui",
+        "price": 16
+    },
+    {
+        "name": "Snitel vienez",
+        "price": 15
+    },
+    {
+        "name": "Snitel crocant",
+        "price": 15
+    },
+    {
+        "name": "Pui crispy",
+        "price": 15
+    },
+    {
+        "name": "Cotlet de porc",
+        "price": 15
+    },
+    {
+        "name": "Ceafa de porc",
+        "price": 16
+    },
+    {
+        "name": "Snitel romanesc",
+        "price": 15
+    },
+    {
+        "name": "Snitel Palermo",
+        "price": 16
+    },
+    {
+        "name": "Ciolan de porc afumat",
+        "price": 17
+    },
+    {
+        "name": "Meniu burger vita",
+        "price": 18
+    },
+    {
+        "name": "Meniu Big Burger",
+        "price": 23
+    },
+    {
+        "name": "Mici",
+        "price": 4
+    },
+    {
+        "name": "Cascaval pane",
+        "price": 13
+    },
+    {
+        "name": "Ciorba de burta",
+        "price": 11
+    },
+    {
+        "name": "Ciorba taraneasca de pui",
+        "price": 9
+    },
+    {
+        "name": "Ciorba taraneasca de porc",
+        "price": 9
+    },
+    {
+        "name": "Ciorba radauteana",
+        "price": 9
+    },
+    {
+        "name": "Penne Carbonara",
+        "price": 18
+    },
+    {
+        "name": "Spaghetti Amatriciana",
+        "price": 18
+    },
+    {
+        "name": "Pennette Funghi e Pollo",
+        "price": 18
+    },
+    {
+        "name": "Pennette al Tonno",
+        "price": 20
+    },
+    {
+        "name": "Spaghetti Arrabbiata",
+        "price": 14
+    },
+    {
+        "name": "Cartofi pai",
+        "price": 6
+    },
+    {
+        "name": "Cartofi piure",
+        "price": 6
+    },
+    {
+        "name": "Cartofi aurii",
+        "price": 6
+    },
+    {
+        "name": "Orez",
+        "price": 6
+    },
+    {
+        "name": "Legume mexicane",
+        "price": 8
+    },
+    {
+        "name": "Clatite cu crema de ciocolata",
+        "price": 11
+    },
+    {
+        "name": "Clatite cu gem",
+        "price": 11
+    },
+    {
+        "name": "Clatite cu branza dulce",
+        "price": 13
+    },
+    {
+        "name": "Papanasi",
+        "price": 14
+    },
+    {
+        "name": "Clatita cu crema de cocos...",
+        "price": 10
+    }
+]

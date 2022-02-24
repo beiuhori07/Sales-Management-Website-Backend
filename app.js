@@ -3,6 +3,7 @@ require('express-async-errors');
 
 // const User = require('./models/User')
 // const Pizza = require('./models/Pizza')
+// const Kitchen = require('./models/Kitchen')
 
 // manual insert pizzas
 
@@ -10,6 +11,14 @@ require('express-async-errors');
 // data.forEach(async (data1) => {
 //     console.log(data1)
 //     const pizzas = await Pizza.create({...data1})
+// })
+
+// manual insert kitchen items
+
+// const data = require('./kitchen-data.json')
+// data.forEach(async (data1) => {
+//     console.log(data1)
+//     const KitchenItems = await Kitchen.create({...data1})
 // })
 
 // extra security packages
@@ -30,6 +39,8 @@ const authenticateUser = require('./middleware/authentication')
 const authRouter = require('./routes/auth')
 const pizzaRouter = require('./routes/pizza-route')
 const pizzaLogsRouter = require('./routes/pizzaLogs-route')
+const kitchenRouter = require('./routes/kitchen-route')
+const kitchenLogsRouter = require('./routes/kitchenLogs-route')
 
 // error handler
 const errorHandlerMiddleware = require('./middleware/error-handler')
@@ -53,6 +64,8 @@ app.get('/', (req, res) =>
 app.use('/api/v1/auth', authRouter)
 app.use('/api/v1/pizza', authenticateUser, pizzaRouter)
 app.use('/api/v1/pizzaLogs', authenticateUser, pizzaLogsRouter)
+app.use('/api/v1/kitchen', authenticateUser, kitchenRouter)
+app.use('/api/v1/kitchenLogs', authenticateUser, kitchenLogsRouter)
 
 app.use(errorHandlerMiddleware)
 app.use(notFoundMiddleware)
