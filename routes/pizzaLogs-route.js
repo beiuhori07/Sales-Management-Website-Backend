@@ -1,8 +1,9 @@
 const express = require('express')
 const router = express.Router()
 
-const getLOTD = require('../controllers/pizzaLogs')
+const { getLOTD, removeItem } = require('../controllers/pizzaLogs')
 
-router.get('/:date', getLOTD)
+router.get('/get/:date', getLOTD)
+router.get('/remove/:id', removeItem);
 
 module.exports = router

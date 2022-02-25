@@ -1,6 +1,29 @@
 const KitchenEntries = require('../models/Kitchen-Entries')
+const Kitchen = require('../models/Kitchen');
+
 const { StatusCodes } = require('http-status-codes')
 const { BadRequestError, NotFoundError } = require('../errors')
+
+const removeItem = async (req, res) => {
+    const { params: {
+        id: kitchenId
+        }
+    } = req
+
+    if(!kitchenId) {
+        throw new BadRequestError('Please provide an item id')
+    }
+
+    const item = await KitchenEntries.findByIdAndRemove(kitchenId);
+    if(!item) {
+        throw new NotFoundError('invalid item id')
+    } else {
+        const findItem = await Kitchen.findOne({ name: item.name })
+        await findItem.updateOne({numberSold: findItem.numberSold - item.numberSold}, {new: true, runValidators: true});
+    }
+
+    res.status(StatusCodes.OK).json(`removed item with id ${kitchenId} and update numberSold`);
+}
 
 const getLOTD = async (req, res) => {
     const { params: { date } } = req
@@ -16,4 +39,7 @@ const getLOTD = async (req, res) => {
     res.status(StatusCodes.OK).json(itemFound)
 }
 
-module.exports = getLOTD
+module.exports = {
+    getLOTD,
+    removeItem
+}
