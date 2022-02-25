@@ -32,9 +32,9 @@ const getLOTD = async (req, res) => {
     }
 
     const pizzaFound = await PizzaEntries.find({ time: date }, 'time _id name numberSold price' )
-    if(!pizzaFound) {
-        throw new NotFoundError('invalid date')
-    }
+    // if(!pizzaFound) {
+    //     throw new NotFoundError('invalid date')
+    // }
     res.status(StatusCodes.OK).json(pizzaFound)
 }
 

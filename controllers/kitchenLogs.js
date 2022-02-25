@@ -33,9 +33,9 @@ const getLOTD = async (req, res) => {
     }
 
     const itemFound = await KitchenEntries.find({ time: date }, 'time _id name numberSold price' )
-    if(!itemFound) {
-        throw new NotFoundError('invalid date')
-    }
+    // if(!itemFound) {
+    //     throw new NotFoundError('invalid date')
+    // }
     res.status(StatusCodes.OK).json(itemFound)
 }
 
