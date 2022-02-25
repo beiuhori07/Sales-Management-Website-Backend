@@ -65,7 +65,7 @@ app.use('/api/v1/auth', authRouter)
 app.use('/api/v1/pizza', authenticateUser, pizzaRouter)
 app.use('/api/v1/pizzaLogs', authenticateUser, pizzaLogsRouter)
 app.use('/api/v1/kitchen', authenticateUser, kitchenRouter)
-app.use('/api/v1/kitchenLogs', kitchenLogsRouter)
+app.use('/api/v1/kitchenLogs', authenticateUser, kitchenLogsRouter)
 
 app.use(errorHandlerMiddleware)
 app.use(notFoundMiddleware)
