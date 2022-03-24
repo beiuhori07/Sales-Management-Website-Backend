@@ -99,7 +99,7 @@ const start = async () => {
         // const user = await User.create({
         //     name: 'hori',
         //     email: 'horibeiu@gmail.com',
-        //     password: 'parola'
+        //     password: ''
         // })
 
 
