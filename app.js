@@ -21,6 +21,12 @@ require('express-async-errors');
 //     const KitchenItems = await Kitchen.create({...data1})
 // })
 
+// const enter = async () => {
+
+//     const KitchenItems = await Kitchen.create({name: "Meniul Zilei", price: 17})
+// }
+// enter();
+
 // extra security packages
 const helmet = require('helmet')
 const cors = require('cors')
